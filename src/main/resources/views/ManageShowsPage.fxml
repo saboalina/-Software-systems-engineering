@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="328.0" prefWidth="568.0" style="-fx-background-color: #f8efe8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ManageShowsController">
+    <children>
+        <TableView fx:id="table" layoutX="37.0" layoutY="43.0" prefHeight="253.0" prefWidth="272.0">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="132.99999618530273" text="Name:" />
+                <TableColumn fx:id="dateColumn" prefWidth="136.3333282470703" text="Date:" />
+            </columns>
+        </TableView>
+        <Button layoutX="339.0" layoutY="220.0" mnemonicParsing="false" onAction="#addShow" prefHeight="25.0" prefWidth="182.0" style="-fx-background-color: #73604f;" text="Add Show" textFill="#fefafa" />
+        <Button layoutX="339.0" layoutY="264.0" mnemonicParsing="false" onAction="#deleteShow" prefHeight="25.0" prefWidth="182.0" style="-fx-background-color: #73604f;" text="Remove Show" textFill="#f9f6f6" />
+        <TextField fx:id="name" layoutX="339.0" layoutY="84.0" prefHeight="25.0" prefWidth="182.0" />
+        <DatePicker fx:id="date" layoutX="339.0" layoutY="157.0" prefHeight="25.0" prefWidth="182.0" />
+        <Label layoutX="339.0" layoutY="43.0" text="Name of the show:" />
+        <Label layoutX="339.0" layoutY="125.0" text="Date:" />
+        <Label layoutX="37.0" layoutY="14.0" text="Shows:" />
+    </children>
+</AnchorPane>

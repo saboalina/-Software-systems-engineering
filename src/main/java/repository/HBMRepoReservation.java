@@ -1,0 +1,184 @@
+package repository;
+
+import domain.Reservation;
+import domain.Spectator;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+
+public class HBMRepoReservation implements ReservationRepository{
+    private JdbcUtils dbUtils;
+
+    //private static final Logger logger= LogManager.getLogger();
+
+    public HBMRepoReservation(Properties props) {
+        //logger.info("Initializing Repository with properties: {} ",props);
+        dbUtils=new JdbcUtils(props);
+    }
+
+    @Override
+    public Reservation findOne(Integer integer) {
+        return null;
+    }
+
+    @Override
+    public Iterable<Reservation> findAll() {
+        try(Session session = dbUtils.getSessionFactory().openSession()) {
+            Transaction tx = null;
+            try {
+                tx = session.beginTransaction();
+                List<Reservation> reservations = session.createQuery("from Reservation", Reservation.class).list();
+                tx.commit();
+                return reservations;
+            } catch (RuntimeException ex) {
+                if (tx != null)
+                    tx.rollback();
+            }
+        }
+        return new ArrayList<>();
+    }
+
+    @Override
+    public Reservation save(Reservation entity) {
+        try(Session session = dbUtils.getSessionFactory().openSession()) {
+            Transaction tx = null;
+            try {
+                tx = session.beginTransaction();
+                session.save(entity);
+                tx.commit();
+                return null;
+            } catch (RuntimeException ex) {
+                if (tx != null)
+                    tx.rollback();
+            }
+        }
+        return entity;
+    }
+
+    @Override
+    public Reservation update(Reservation entity) {
+        return null;
+    }
+
+    @Override
+    public Reservation delete(Integer integer) {
+        try(Session session = dbUtils.getSessionFactory().openSession()) {
+            Transaction tx = null;
+            try {
+                tx = session.beginTransaction();
+
+                Reservation crit = session.createQuery("from Reservation where id like :id", Reservation.class)
+                        .setParameter("id", integer)
+                        .setMaxResults(1)
+                        .uniqueResult();
+                session.delete(crit);
+                tx.commit();
+                return crit;
+            } catch (RuntimeException ex) {
+                if (tx != null)
+                    tx.rollback();
+            }
+        }
+        return null;
+
+    }
+
+    /*
+    @Override
+    public Spectator findOne(String s) {
+        try(Session session = dbUtils.getSessionFactory().openSession()) {
+            Transaction tx = null;
+            try {
+                tx = session.beginTransaction();
+                Spectator spectator = session.createQuery("from Spectator e where e.username like :id", Spectator.class).setParameter("id", s).setMaxResults(1).uniqueResult();
+                //Spectator spectator = session.createQuery("from Spectator where username like '"+s+"'", Spectator.class).getSingleResult();
+                tx.commit();
+                return spectator;
+            } catch (RuntimeException ex) {
+                if (tx != null)
+                    tx.rollback();
+            }
+        }
+        return null;
+    }
+*/
+
+/*
+    @Override
+    public Iterable<Employee> findAll() {
+        try(Session session = dbUtils.getSessionFactory().openSession()) {
+            Transaction tx = null;
+            try {
+                tx = session.beginTransaction();
+                List<Employee> employees = session.createQuery("from Employee", Employee.class).list();
+                tx.commit();
+                return employees;
+            } catch (RuntimeException ex) {
+                if (tx != null)
+                    tx.rollback();
+            }
+        }
+        return new ArrayList<>();
+    }
+
+    @Override
+    public Employee save(Employee entity) {
+        try(Session session = dbUtils.getSessionFactory().openSession()) {
+            Transaction tx = null;
+            try {
+                tx = session.beginTransaction();
+                session.save(entity);
+                tx.commit();
+                return null;
+            } catch (RuntimeException ex) {
+                if (tx != null)
+                    tx.rollback();
+            }
+        }
+        return entity;
+    }
+
+    @Override
+    public Employee update(Employee entity) {
+        try(Session session = dbUtils.getSessionFactory().openSession()){
+            Transaction tx=null;
+            try{
+                tx = session.beginTransaction();
+                Employee employee = session.load( Employee.class, entity.getUsername());
+                employee.setPassword(entity.getPassword());
+                employee.setName(entity.getName());
+                tx.commit();
+                return null;
+            } catch(RuntimeException ex){
+                if (tx!=null)
+                    tx.rollback();
+            }
+        }
+        return entity;
+    }
+
+    @Override
+    public Employee delete(String s) {
+        try(Session session = dbUtils.getSessionFactory().openSession()) {
+            Transaction tx = null;
+            try {
+                tx = session.beginTransaction();
+
+                Employee crit = session.createQuery("from Employee where id like :id", Employee.class)
+                        .setParameter("id", s)
+                        .setMaxResults(1)
+                        .uniqueResult();
+                session.delete(crit);
+                tx.commit();
+                return crit;
+            } catch (RuntimeException ex) {
+                if (tx != null)
+                    tx.rollback();
+            }
+        }
+        return null;
+    }*/
+}

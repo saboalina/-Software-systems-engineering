@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+    <class name="domain.Reservation"
+           table="Reservation">
+        <id name="id" column="id">
+        </id>
+        <property
+                name="clientName"
+                column="clientName"/>
+        <property
+                name="hour"
+                column="hour"/>
+        <property
+                name="seats"
+                column="seats"/>
+        <property
+                name="showId"
+                column="showId"/>
+        <property
+                name="price"
+                column="price"/>
+        <property
+                name="cardNumber"
+                column="cardNumber"/>
+    </class>
+</hibernate-mapping>

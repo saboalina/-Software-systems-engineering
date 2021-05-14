@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f8efe8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainSpectatorController">
+    <children>
+        <Label layoutX="30.0" layoutY="30.0" text="Logged in as:" />
+        <TextField fx:id="name" layoutX="117.0" layoutY="26.0" />
+        <TextField fx:id="show" layoutX="428.0" layoutY="26.0" />
+        <Label layoutX="339.0" layoutY="30.0" text="Today's show:" />
+        <Label alignment="CENTER" layoutX="150.0" layoutY="338.0" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: black;" text="Stage" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font></Label>
+
+        <Label alignment="CENTER" layoutX="50.0" layoutY="300.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #dac2b6;" text="1" />
+        <Label alignment="CENTER" layoutX="100.0" layoutY="280.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #dac2b6;" text="2" />
+        <Label alignment="CENTER" layoutX="150.0" layoutY="260.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #dac2b6;" text="3" />
+        <Label alignment="CENTER" layoutX="200.0" layoutY="260.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #dac2b6;" text="4" />
+        <Label alignment="CENTER" layoutX="250.0" layoutY="280.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #dac2b6;" text="5" />
+        <Label alignment="CENTER" layoutX="300.0" layoutY="300.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #dac2b6;" text="6" />
+        <Label alignment="CENTER" layoutX="50.0" layoutY="250.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #c59881;" text="7" />
+        <Label alignment="CENTER" layoutX="100.0" layoutY="230.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #c59881;" text="8" />
+        <Label alignment="CENTER" layoutX="150.0" layoutY="210.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #c59881;" text="9" />
+        <Label alignment="CENTER" layoutX="200.0" layoutY="210.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #c59881;" text="10" />
+        <Label alignment="CENTER" layoutX="250.0" layoutY="230.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #c59881;" text="11" />
+        <Label alignment="CENTER" layoutX="300.0" layoutY="250.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #c59881;" text="12" />
+        <Label alignment="CENTER" layoutX="50.0" layoutY="200.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #c59881;" text="13" />
+        <Label alignment="CENTER" layoutX="100.0" layoutY="180.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #c59881;" text="14" />
+        <Label alignment="CENTER" layoutX="150.0" layoutY="160.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #c59881;" text="15" />
+        <Label alignment="CENTER" layoutX="200.0" layoutY="160.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #c59881;" text="16" />
+        <Label alignment="CENTER" layoutX="250.0" layoutY="180.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #c59881;" text="17" />
+        <Label alignment="CENTER" layoutX="300.0" layoutY="200.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #c59881;" text="18" />
+        <Label alignment="CENTER" layoutX="50.0" layoutY="150.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #73604f;" text="19" />
+        <Label alignment="CENTER" layoutX="100.0" layoutY="130.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #73604f;" text="20" />
+        <Label alignment="CENTER" layoutX="150.0" layoutY="110.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #73604f;" text="21" />
+        <Label alignment="CENTER" layoutX="200.0" layoutY="110.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #73604f;" text="22" />
+        <Label alignment="CENTER" layoutX="250.0" layoutY="130.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #73604f;" text="23" />
+        <Label alignment="CENTER" layoutX="300.0" layoutY="150.0" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #73604f;" text="24" />
+        <Button layoutX="402.0" layoutY="178.0" mnemonicParsing="false" onAction="#buyBack" prefHeight="44.0" prefWidth="175.0" style="-fx-background-color: #73604f;" text="Section: Back | Price: 70" textFill="#151515" />
+        <Button layoutX="402.0" layoutY="246.0" mnemonicParsing="false" onAction="#buyMiddle" prefHeight="44.0" prefWidth="175.0" style="-fx-background-color: #c59881;" text="Section: Middle | Price: 80" />
+        <Button layoutX="402.0" layoutY="316.0" mnemonicParsing="false" onAction="#buyFront" prefHeight="44.0" prefWidth="175.0" style="-fx-background-color: #dac2b6;" text="Section: Front | Price: 100" />
+        <Label layoutX="376.0" layoutY="127.0" prefHeight="35.0" prefWidth="203.0" text="Select a section to make a reservation:" />
+
+
+    </children>
+</AnchorPane>

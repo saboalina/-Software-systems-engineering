@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="328.0" prefWidth="379.0" style="-fx-background-color: #f8efe8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ManageReservationsController">
+    <children>
+        <TableView fx:id="table" layoutX="37.0" layoutY="43.0" prefHeight="207.0" prefWidth="308.0">
+            <columns>
+                <TableColumn fx:id="show" prefWidth="116.66665267944336" text="Show:" />
+                <TableColumn fx:id="client" prefWidth="116.33335876464844" text="Client:" />
+                <TableColumn fx:id="seats" prefWidth="73.66668701171875" text="Seats:" />
+            </columns>
+        </TableView>
+        <Button layoutX="37.0" layoutY="276.0" mnemonicParsing="false" onAction="#deleteReservation" prefHeight="25.0" prefWidth="308.0" style="-fx-background-color: #73604f;" text="Cancel reservation" textFill="#f9f6f6" />
+        <Label layoutX="37.0" layoutY="14.0" text="Reservations:" />
+    </children>
+</AnchorPane>

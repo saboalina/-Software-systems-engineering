@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+    <class name="domain.Seat"
+           table="Seat">
+        <id name="number" column="number">
+        </id>
+        <property
+                name="row"
+                column="row"/>
+        <property
+                name="lodge"
+                column="lodge"/>
+        <property
+                name="price"
+                column="price"/>
+        <property
+                name="state"
+                column="state"/>
+    </class>
+</hibernate-mapping>

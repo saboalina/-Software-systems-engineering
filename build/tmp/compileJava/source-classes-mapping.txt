@@ -1,0 +1,65 @@
+domain/Reservation.java
+ domain.Reservation
+repository/HBMRepoSpectator.java
+ repository.HBMRepoSpectator
+repository/SpectatorRepository.java
+ repository.SpectatorRepository
+domain/Spectator.java
+ domain.Spectator
+domain/Manager.java
+ domain.Manager
+domain/org/hibernate/dialect/identity/SQLiteDialectIdentityColumnSupport.java
+ domain.org.hibernate.dialect.identity.SQLiteDialectIdentityColumnSupport
+repository/JdbcUtils.java
+ repository.JdbcUtils
+repository/Repository.java
+ repository.Repository
+domain/org/hibernate/dialect/SQLiteDialect.java
+ domain.org.hibernate.dialect.SQLiteDialect
+ domain.org.hibernate.dialect.SQLiteDialect$1
+ domain.org.hibernate.dialect.SQLiteDialect$2
+ domain.org.hibernate.dialect.SQLiteDialect$3
+ domain.org.hibernate.dialect.SQLiteDialect$4
+ domain.org.hibernate.dialect.SQLiteDialect$SQLiteUniqueDelegate
+repository/ManagerRepository.java
+ repository.ManagerRepository
+repository/HBMRepoManager.java
+ repository.HBMRepoManager
+controllers/MessageAlert.java
+ controllers.MessageAlert
+repository/ReservationRepository.java
+ repository.ReservationRepository
+repository/HBMRepoShow.java
+ repository.HBMRepoShow
+domain/Show.java
+ domain.Show
+repository/ShowRepository.java
+ repository.ShowRepository
+repository/HBMRepoReservation.java
+ repository.HBMRepoReservation
+controllers/LoginController.java
+ controllers.LoginController
+service/Service.java
+ service.Service
+controllers/ManageShowsController.java
+ controllers.ManageShowsController
+domain/Seat.java
+ domain.Seat
+repository/HBMRepoSeat.java
+ repository.HBMRepoSeat
+repository/SeatRepository.java
+ repository.SeatRepository
+controllers/ManageReservationsController.java
+ controllers.ManageReservationsController
+Main.java
+ Main
+controllers/MainManagerController.java
+ controllers.MainManagerController
+MainApp.java
+ MainApp
+controllers/MainSpectatorController.java
+ controllers.MainSpectatorController
+controllers/FinishController.java
+ controllers.FinishController
+controllers/ReservationController.java
+ controllers.ReservationController

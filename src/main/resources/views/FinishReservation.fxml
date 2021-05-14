@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #dac2b6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FinishController">
+    <children>
+        <Button layoutX="227.0" layoutY="253.0" mnemonicParsing="false" onAction="#cancelButton" style="-fx-background-color: #73604f;" text="Cancel" />
+        <Label layoutX="35.0" layoutY="34.0" text="Details of the reservation:" />
+        <Label layoutX="34.0" layoutY="150.0" text="Client:" />
+        <Label layoutX="34.0" layoutY="117.0" text="Hour:" />
+        <Label layoutX="35.0" layoutY="182.0" text="Seats:" />
+        <Label layoutX="35.0" layoutY="87.0" text="Name of the show:" />
+        <Label layoutX="35.0" layoutY="212.0" text="Total:" />
+        <Button layoutX="38.0" layoutY="253.0" mnemonicParsing="false" onAction="#addReservation" style="-fx-background-color: #73604f;" text="Finish" />
+      <Label fx:id="showlbl" layoutX="170.0" layoutY="87.0" text="Label" />
+      <Label fx:id="hourlbl" layoutX="170.0" layoutY="117.0" text="Label" />
+      <Label fx:id="clientlbl" layoutX="170.0" layoutY="150.0" text="Label" />
+      <Label fx:id="seatslbl" layoutX="170.0" layoutY="182.0" text="Label" />
+      <Label fx:id="totallbl" layoutX="170.0" layoutY="212.0" text="Label" />
+    </children>
+</AnchorPane>
